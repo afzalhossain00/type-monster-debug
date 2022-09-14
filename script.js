@@ -29,6 +29,11 @@ const typeController = (e) => {
     return display.removeChild(display.lastChild);
   }
 
+  // Scorall bar fixed
+  window.onkeydown = function (e) {
+    return !(e.keyCode == 'space');
+  };
+
   // these are the valid character we are allowing to type
   const validLetters =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890!@#$%^&*()_+-={}[]'\".,?";
