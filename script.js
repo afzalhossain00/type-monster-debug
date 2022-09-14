@@ -31,7 +31,7 @@ const typeController = (e) => {
 
   // Scorall bar fixed
   window.onkeydown = function (e) {
-    return !(e.keyCode == 'space');
+    return !(e.keyCode == (space));
   };
 
   // these are the valid character we are allowing to type
@@ -72,7 +72,7 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = (finishTime - startTime) / 1000;
+  const timeTaken = parseInt((finishTime - startTime) / 1000);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -138,7 +138,7 @@ displayHistory();
 // Show typing time spent
 setInterval(() => {
   const currentTime = new Date().getTime();
-  const timeSpent = (currentTime - startTime) / 1000;
+  const timeSpent = parseInt((currentTime - startTime) / 1000);
 
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
