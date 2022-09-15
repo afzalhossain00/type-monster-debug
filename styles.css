@@ -153,6 +153,7 @@ button {
   grid-gap: 10px;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .card {
