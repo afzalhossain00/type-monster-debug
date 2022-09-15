@@ -11,6 +11,11 @@ let errorCount = 0;
 let startTime = 0;
 let questionText = "";
 
+// Scroll bar fixed when press space button
+window.onkeydown = function (e) {
+  return !(e.keyCode == 32);
+};
+
 // Load and display question
 fetch("./texts.json")
   .then((res) => res.json())
@@ -28,11 +33,6 @@ const typeController = (e) => {
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
   }
-
-  // Scorall bar fixed
-  window.onkeydown = function (e) {
-    return !(e.keyCode == 32);
-  };
 
   // these are the valid character we are allowing to type
   const validLetters =
