@@ -31,7 +31,7 @@ const typeController = (e) => {
 
   // Scorall bar fixed
   window.onkeydown = function (e) {
-    return !(e.keyCode == (space));
+    return !(e.keyCode == 32);
   };
 
   // these are the valid character we are allowing to type
@@ -51,6 +51,7 @@ const typeController = (e) => {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    errorCount++;
   }
 
   // check if given question text is equal to user typed text
